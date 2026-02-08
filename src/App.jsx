@@ -297,6 +297,118 @@ const sections = [
         "None of these require anything of you right now. They're just there, ready, whenever the time feels right.",
     },
   },
+  {
+    id: "comedy",
+    icon: "🎭",
+    title: "Comedy Clubs & Stand-Up",
+    color: "#8B4513",
+    accent: "#DEB887",
+    content: {
+      intro:
+        "Cambridge has a thriving comedy scene with regular stand-up nights, improv shows, and comedy clubs. From intimate pub gigs to the famous Footlights, there's always something to make you laugh.",
+      highlights: [
+        {
+          title: "The Cambridge Footlights",
+          detail:
+            "The world's most famous university comedy club, founded in 1883. Alumni include Stephen Fry, Hugh Laurie, Emma Thompson, John Cleese, Eric Idle, and David Mitchell. They put on regular shows during term time — revues, smokers, and the annual pantomime. Public can attend many performances at the ADC Theatre.",
+          link: "https://www.footlights.org/",
+          linkText: "Cambridge Footlights",
+        },
+        {
+          title: "The ADC Theatre",
+          detail:
+            "The oldest university playhouse in the country, hosting comedy nights, student productions, and professional shows. Regular late-night comedy slots and the Footlights' home venue. Right in the heart of Cambridge.",
+          link: "https://www.adctheatre.com/",
+          linkText: "ADC Theatre — What's On",
+        },
+        {
+          title: "The Cambridge Comedy Club",
+          detail:
+            "A dedicated comedy club hosting professional stand-up comedians every week. Held at various venues around Cambridge including The Junction. Features both established circuit comedians and up-and-coming acts.",
+          link: "https://www.junction.co.uk/",
+          linkText: "The Junction — Comedy Events",
+        },
+        {
+          title: "The Portland Arms",
+          detail:
+            "A popular pub venue in Cambridge that hosts regular comedy nights alongside live music. Intimate atmosphere, good beer, and a mix of local and touring comedians. The kind of place where you can just turn up and have a good night.",
+          link: "https://theportlandarms.co.uk/",
+          linkText: "The Portland Arms",
+        },
+        {
+          title: "The Corn Exchange",
+          detail:
+            "Cambridge's largest entertainment venue regularly hosts big-name touring comedians. Past performers include Michael McIntyre, Jimmy Carr, and Sarah Millican. Check their listings for upcoming comedy tours.",
+          link: "https://cornex.co.uk/",
+          linkText: "Cambridge Corn Exchange",
+        },
+      ],
+      keyMessage:
+        "Comedy has deep roots in Cambridge — it's where some of Britain's best comedians learned their craft. Whether you want to see established names or discover new talent, there's always something on.",
+    },
+  },
+  {
+    id: "music",
+    icon: "🎵",
+    title: "Live Music & Music Clubs",
+    color: "#4B0082",
+    accent: "#9370DB",
+    content: {
+      intro:
+        "From intimate jazz clubs to larger concert venues, Cambridge and the surrounding area has a vibrant live music scene covering everything from folk and jazz to rock and electronic music.",
+      highlights: [
+        {
+          title: "The Portland Arms",
+          detail:
+            "One of Cambridge's best-loved live music venues. An intimate pub setting hosting everything from indie bands to folk acts, jazz nights to electronic music. Regular gigs most nights of the week. A proper music pub with character.",
+          link: "https://theportlandarms.co.uk/",
+          linkText: "The Portland Arms — Gig Listings",
+        },
+        {
+          title: "The Junction",
+          detail:
+            "Cambridge's premier live music and club venue. Two performance spaces hosting touring bands, club nights, and local acts. Everything from rock and indie to drum & bass and house. Also hosts regular comedy and theatre.",
+          link: "https://www.junction.co.uk/",
+          linkText: "The Junction — What's On",
+        },
+        {
+          title: "Cambridge Folk Festival",
+          detail:
+            "One of the world's premier folk festivals, held every summer at Cherry Hinton Hall. Four days of music across multiple stages, featuring legends and newcomers alike. A genuine institution since 1965.",
+          link: "https://www.cambridgefolkfestival.co.uk/",
+          linkText: "Cambridge Folk Festival",
+        },
+        {
+          title: "The Corn Exchange",
+          detail:
+            "A beautiful Grade II listed venue in the heart of Cambridge, hosting major touring artists across all genres. From classical concerts to rock legends, jazz greats to contemporary pop. Excellent acoustics in a historic setting.",
+          link: "https://cornex.co.uk/",
+          linkText: "Cambridge Corn Exchange",
+        },
+        {
+          title: "Hidden Rooms",
+          detail:
+            "A basement club in central Cambridge hosting DJ nights, electronic music, and late-night dancing. Intimate underground atmosphere with quality sound. Open until late on weekends.",
+          link: "https://hiddenrooms.co.uk/",
+          linkText: "Hidden Rooms Cambridge",
+        },
+        {
+          title: "Cambridge Jazz Club",
+          detail:
+            "Regular jazz nights held at various venues around Cambridge. Features local musicians, visiting artists, and jam sessions. A welcoming community for jazz lovers — just turn up and enjoy.",
+          link: "https://cambridgejazz.org/",
+          linkText: "Cambridge Jazz",
+        },
+        {
+          title: "The Old Chequers, Royston",
+          detail:
+            "Right in Royston's town centre, The Old Chequers hosts occasional live music nights featuring local bands and acoustic acts. A friendly local pub where you can catch live music without travelling far.",
+        },
+      ],
+      keyMessage:
+        "Whether you're into folk, jazz, indie rock, or electronic music — there's a venue and a night for you. Cambridge punches well above its weight for live music, and it's all just a short train ride away.",
+    },
+  },
 ];
 
 const trainFacts = [
@@ -314,6 +426,10 @@ const trainFacts = [
   "Cambridge: 5,000+ tech companies — the UK's Silicon Valley",
   "Silicon Fen generates £35 billion in global turnover",
   "ARM, Apple, Amazon, AstraZeneca — all have major Cambridge offices",
+  "Cambridge Footlights alumni: Stephen Fry, Hugh Laurie, John Cleese, Emma Thompson",
+  "The Cambridge Folk Festival has run every summer since 1965",
+  "The Junction hosts 500+ live events every year",
+  "The Portland Arms — live music and comedy most nights of the week",
 ];
 
 function App() {
