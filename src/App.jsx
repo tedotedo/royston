@@ -432,10 +432,241 @@ const trainFacts = [
   "The Portland Arms — live music and comedy most nights of the week",
 ];
 
+const quizQuestions = [
+  // History questions
+  {
+    category: "History",
+    question: "What is the mystery behind Royston Cave?",
+    options: [
+      "It was a Roman bath house",
+      "Its origins are unknown — possibly Knights Templar",
+      "It was a Saxon burial chamber",
+      "It was a medieval wine cellar"
+    ],
+    correct: 1,
+    explanation: "Royston Cave's origins remain debated. The cave is carved with medieval figures and symbols, and theories range from Knights Templar connections to other medieval religious orders."
+  },
+  {
+    category: "History",
+    question: "When was Cambridge University founded?",
+    options: [
+      "1066",
+      "1209",
+      "1348",
+      "1450"
+    ],
+    correct: 1,
+    explanation: "Cambridge University was founded in 1209 by scholars who left Oxford after a dispute with townspeople. It's the second-oldest university in the English-speaking world."
+  },
+  {
+    category: "History",
+    question: "What was Oliver Cromwell's connection to Cambridge?",
+    options: [
+      "He was Vice-Chancellor of the University",
+      "He was the local MP",
+      "He founded a college there",
+      "He was born in Cambridge"
+    ],
+    correct: 1,
+    explanation: "Oliver Cromwell served as the Member of Parliament for Cambridge. He was also a student at Sidney Sussex College, where his head is now buried."
+  },
+  {
+    category: "History",
+    question: "IWM Duxford was a key base during which major air campaign?",
+    options: [
+      "The Berlin Airlift",
+      "The Battle of Britain",
+      "The Dambusters Raid",
+      "D-Day operations"
+    ],
+    correct: 1,
+    explanation: "Duxford was a major RAF fighter base during the Battle of Britain in 1940. Douglas Bader's 'Big Wing' operated from here, and the base saw intense action against the Luftwaffe."
+  },
+  {
+    category: "History",
+    question: "Who designed the American Air Museum at Duxford?",
+    options: [
+      "Renzo Piano",
+      "Zaha Hadid",
+      "Norman Foster",
+      "Richard Rogers"
+    ],
+    correct: 2,
+    explanation: "The American Air Museum was designed by Norman Foster and opened in 1997. Its dramatic curved roof spans the collection of American aircraft without internal supports."
+  },
+  // Train questions (harder)
+  {
+    category: "Trains",
+    question: "Which Polish locomotive class operates on the Nene Valley Railway?",
+    options: [
+      "Class Ty2",
+      "Class Śląsk (TKt48)",
+      "Class Ol49",
+      "Class Pt47"
+    ],
+    correct: 1,
+    explanation: "The Nene Valley Railway operates a Polish Class TKt48, known as 'Śląsk' (Silesian). It's one of the unique continental locomotives that make NVR special in the UK."
+  },
+  {
+    category: "Trains",
+    question: "In which two James Bond films did the Nene Valley Railway feature?",
+    options: [
+      "The Living Daylights and GoldenEye",
+      "Octopussy and GoldenEye",
+      "A View to a Kill and Tomorrow Never Dies",
+      "The Spy Who Loved Me and Moonraker"
+    ],
+    correct: 1,
+    explanation: "The NVR appeared in Octopussy (1983) with the circus train scenes, and GoldenEye (1995) for the Russian tank chase sequence. Its continental stock made it perfect for 'foreign' locations."
+  },
+  {
+    category: "Trains",
+    question: "What is the fastest journey time from Royston to London King's Cross?",
+    options: [
+      "28 minutes",
+      "36 minutes",
+      "44 minutes",
+      "52 minutes"
+    ],
+    correct: 1,
+    explanation: "The fastest direct trains from Royston to King's Cross take just 36 minutes, with around 40 trains running daily on the Great Northern route."
+  },
+  {
+    category: "Trains",
+    question: "Which train operating company runs the main Royston to London services?",
+    options: [
+      "Greater Anglia",
+      "Thameslink",
+      "Great Northern",
+      "East Midlands Railway"
+    ],
+    correct: 2,
+    explanation: "Great Northern operates most Royston to King's Cross services. Thameslink also runs some services on the route as part of the Govia Thameslink Railway franchise."
+  },
+  {
+    category: "Trains",
+    question: "The East Coast Main Line, which Royston sits near, was electrified at what voltage?",
+    options: [
+      "750V DC third rail",
+      "15kV AC overhead",
+      "25kV AC overhead",
+      "1500V DC overhead"
+    ],
+    correct: 2,
+    explanation: "The East Coast Main Line uses 25kV AC overhead electrification, the standard for main line railways in Britain since the 1960s modernisation programme."
+  },
+  {
+    category: "Trains",
+    question: "What unique feature allows the Nene Valley Railway to run continental European stock?",
+    options: [
+      "It uses European standard gauge track",
+      "It has continental loading gauge clearances",
+      "It operates on 15kV AC like European railways",
+      "It uses the Scharfenberg coupler system"
+    ],
+    correct: 1,
+    explanation: "The NVR was specifically built with continental loading gauge clearances, allowing larger European locomotives and rolling stock to operate. Standard UK gauge is more restrictive."
+  },
+  {
+    category: "Trains",
+    question: "Which Eurostar destination from St Pancras has a journey time of approximately 2 hours 15 minutes?",
+    options: [
+      "Brussels",
+      "Amsterdam",
+      "Paris",
+      "Lille"
+    ],
+    correct: 2,
+    explanation: "Paris Gare du Nord is 2 hours 15 minutes from St Pancras. Brussels is slightly under 2 hours, while Amsterdam takes about 4 hours."
+  },
+  {
+    category: "Trains",
+    question: "What class of locomotive were the original 'Deltics' that once ran through Royston on express services?",
+    options: [
+      "Class 40",
+      "Class 47",
+      "Class 55",
+      "Class 37"
+    ],
+    correct: 2,
+    explanation: "The Class 55 'Deltics' were iconic locomotives on the East Coast Main Line from 1961-1981. Named after their Napier Deltic engines, they were the most powerful diesel locomotives in Britain."
+  },
+  {
+    category: "History",
+    question: "Which Cambridge college was founded by King Henry VI in 1441?",
+    options: [
+      "Trinity College",
+      "St John's College",
+      "King's College",
+      "Queens' College"
+    ],
+    correct: 2,
+    explanation: "King's College was founded by Henry VI in 1441. Its famous chapel, with the world's largest fan vault ceiling, took nearly 100 years to complete."
+  },
+  {
+    category: "History",
+    question: "The Cambridge Spies were a group of Soviet double agents. Which college did several of them attend?",
+    options: [
+      "Pembroke College",
+      "Trinity College",
+      "Churchill College",
+      "Corpus Christi College"
+    ],
+    correct: 1,
+    explanation: "Trinity College was attended by several of the Cambridge Five, including Kim Philby, Guy Burgess, and Anthony Blunt. They were recruited as Soviet agents in the 1930s."
+  },
+];
+
 function App() {
   const [activeSection, setActiveSection] = useState(null);
   const [factIndex, setFactIndex] = useState(0);
   const [showWelcome, setShowWelcome] = useState(true);
+  const [showQuiz, setShowQuiz] = useState(false);
+  const [quizState, setQuizState] = useState({
+    currentQuestion: 0,
+    score: 0,
+    answered: false,
+    selectedAnswer: null,
+    showResults: false,
+    shuffledQuestions: [],
+  });
+
+  const startQuiz = () => {
+    const shuffled = [...quizQuestions].sort(() => Math.random() - 0.5).slice(0, 10);
+    setQuizState({
+      currentQuestion: 0,
+      score: 0,
+      answered: false,
+      selectedAnswer: null,
+      showResults: false,
+      shuffledQuestions: shuffled,
+    });
+    setShowQuiz(true);
+  };
+
+  const handleAnswer = (index) => {
+    if (quizState.answered) return;
+    const isCorrect = index === quizState.shuffledQuestions[quizState.currentQuestion].correct;
+    setQuizState(prev => ({
+      ...prev,
+      answered: true,
+      selectedAnswer: index,
+      score: isCorrect ? prev.score + 1 : prev.score,
+    }));
+  };
+
+  const nextQuestion = () => {
+    if (quizState.currentQuestion + 1 >= quizState.shuffledQuestions.length) {
+      setQuizState(prev => ({ ...prev, showResults: true }));
+    } else {
+      setQuizState(prev => ({
+        ...prev,
+        currentQuestion: prev.currentQuestion + 1,
+        answered: false,
+        selectedAnswer: null,
+      }));
+    }
+  };
 
   const nextFact = () => setFactIndex((i) => (i + 1) % trainFacts.length);
   const prevFact = () =>
@@ -647,6 +878,20 @@ function App() {
 
   return (
     <div style={styles.container}>
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        disablePictureInPicture
+        style={styles.backgroundVideo}
+        onCanPlay={(e) => e.target.play()}
+      >
+        <source src="/background.mp4" type="video/mp4" />
+      </video>
+
       {/* Header */}
       <header style={styles.header}>
         <div style={styles.headerInner}>
@@ -655,9 +900,9 @@ function App() {
         </div>
       </header>
 
-      {!activeSection && <TrainScene />}
+      {!activeSection && !showQuiz && <TrainScene />}
 
-      {showWelcome && !activeSection && (
+      {showWelcome && !activeSection && !showQuiz && (
         <div style={styles.welcomeCard}>
           <p style={styles.welcomeText}>
 
@@ -677,7 +922,7 @@ function App() {
         </div>
       )}
 
-      {!activeSection && !showWelcome && (
+      {!activeSection && !showWelcome && !showQuiz && (
         <>
           {/* Ticker */}
           <div style={styles.tickerContainer}>
@@ -721,6 +966,30 @@ function App() {
                 <span style={styles.cardArrow}>→</span>
               </button>
             ))}
+
+            {/* Quiz Button */}
+            <button
+              style={{
+                ...styles.card,
+                borderLeft: "5px solid #FFD700",
+                background: "linear-gradient(135deg, #FFFEF0 0%, #FFF8DC 100%)",
+              }}
+              onClick={startQuiz}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-3px)";
+                e.currentTarget.style.boxShadow = "0 8px 30px rgba(0,0,0,0.12)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 2px 12px rgba(0,0,0,0.06)";
+              }}
+            >
+              <span style={styles.cardIcon}>🧠</span>
+              <span style={{ ...styles.cardTitle, color: "#8B6914" }}>
+                Test Your Knowledge — Take the Quiz!
+              </span>
+              <span style={styles.cardArrow}>→</span>
+            </button>
           </div>
 
           {/* Bottom note */}
@@ -731,6 +1000,121 @@ function App() {
             </p>
           </div>
         </>
+      )}
+
+      {/* Quiz View */}
+      {showQuiz && !quizState.showResults && quizState.shuffledQuestions.length > 0 && (
+        <div style={styles.quizContainer}>
+          <button
+            style={styles.backButton}
+            onClick={() => setShowQuiz(false)}
+          >
+            ← Back to all topics
+          </button>
+
+          <div style={styles.quizHeader}>
+            <span style={styles.quizIcon}>🧠</span>
+            <h2 style={styles.quizTitle}>Local Knowledge Quiz</h2>
+          </div>
+
+          <div style={styles.quizProgress}>
+            <span style={styles.quizProgressText}>
+              Question {quizState.currentQuestion + 1} of {quizState.shuffledQuestions.length}
+            </span>
+            <span style={styles.quizCategory}>
+              {quizState.shuffledQuestions[quizState.currentQuestion].category}
+            </span>
+          </div>
+
+          <div style={styles.quizCard}>
+            <p style={styles.quizQuestion}>
+              {quizState.shuffledQuestions[quizState.currentQuestion].question}
+            </p>
+
+            <div style={styles.quizOptions}>
+              {quizState.shuffledQuestions[quizState.currentQuestion].options.map((option, index) => {
+                const isSelected = quizState.selectedAnswer === index;
+                const isCorrect = index === quizState.shuffledQuestions[quizState.currentQuestion].correct;
+                const showResult = quizState.answered;
+
+                let optionStyle = { ...styles.quizOption };
+                if (showResult) {
+                  if (isCorrect) {
+                    optionStyle = { ...optionStyle, ...styles.quizOptionCorrect };
+                  } else if (isSelected && !isCorrect) {
+                    optionStyle = { ...optionStyle, ...styles.quizOptionWrong };
+                  }
+                }
+
+                return (
+                  <button
+                    key={`${quizState.currentQuestion}-${index}`}
+                    style={optionStyle}
+                    onClick={() => handleAnswer(index)}
+                    disabled={quizState.answered}
+                  >
+                    <span style={styles.quizOptionLetter}>
+                      {String.fromCharCode(65 + index)}
+                    </span>
+                    <span style={styles.quizOptionText}>{option}</span>
+                    {showResult && isCorrect && <span style={styles.quizCheckmark}>✓</span>}
+                    {showResult && isSelected && !isCorrect && <span style={styles.quizCross}>✗</span>}
+                  </button>
+                );
+              })}
+            </div>
+
+            {quizState.answered && (
+              <div style={styles.quizExplanation}>
+                <p style={styles.quizExplanationText}>
+                  {quizState.shuffledQuestions[quizState.currentQuestion].explanation}
+                </p>
+                <button style={styles.quizNextButton} onClick={nextQuestion}>
+                  {quizState.currentQuestion + 1 >= quizState.shuffledQuestions.length
+                    ? "See Results →"
+                    : "Next Question →"}
+                </button>
+              </div>
+            )}
+          </div>
+
+          <div style={styles.quizScore}>
+            Score: {quizState.score} / {quizState.currentQuestion + (quizState.answered ? 1 : 0)}
+          </div>
+        </div>
+      )}
+
+      {/* Quiz Results */}
+      {showQuiz && quizState.showResults && (
+        <div style={styles.quizContainer}>
+          <div style={styles.quizResultsCard}>
+            <span style={styles.quizResultsIcon}>
+              {quizState.score >= 8 ? "🏆" : quizState.score >= 5 ? "🌟" : "📚"}
+            </span>
+            <h2 style={styles.quizResultsTitle}>Quiz Complete!</h2>
+            <p style={styles.quizResultsScore}>
+              You scored {quizState.score} out of {quizState.shuffledQuestions.length}
+            </p>
+            <p style={styles.quizResultsMessage}>
+              {quizState.score >= 8
+                ? "Excellent! You really know your local history and railways!"
+                : quizState.score >= 5
+                ? "Good effort! You've picked up quite a bit about the area."
+                : "Keep exploring — there's so much to discover about Royston and Cambridge!"}
+            </p>
+            <div style={styles.quizResultsButtons}>
+              <button style={styles.quizRetryButton} onClick={startQuiz}>
+                Try Again
+              </button>
+              <button
+                style={styles.quizBackButton}
+                onClick={() => setShowQuiz(false)}
+              >
+                Back to Topics
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* Detail View */}
@@ -822,6 +1206,18 @@ const styles = {
     padding: "0 20px",
     backgroundColor: "#FAFAF7",
     minHeight: "100vh",
+    position: "relative",
+  },
+  backgroundVideo: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "100vh",
+    objectFit: "cover",
+    opacity: 0.15,
+    zIndex: -1,
+    pointerEvents: "none",
   },
   header: {
     textAlign: "center",
@@ -1071,6 +1467,216 @@ const styles = {
     width: "100%",
     height: "auto",
     display: "block",
+  },
+  // Quiz styles
+  quizContainer: {
+    padding: "20px 0",
+  },
+  quizHeader: {
+    backgroundColor: "#8B6914",
+    borderRadius: 12,
+    padding: "28px 24px",
+    display: "flex",
+    alignItems: "center",
+    gap: 16,
+    marginBottom: 24,
+  },
+  quizIcon: {
+    fontSize: 36,
+  },
+  quizTitle: {
+    color: "#FFFFFF",
+    fontSize: 24,
+    fontWeight: 700,
+    margin: 0,
+    fontFamily: '"Merriweather", "Georgia", serif',
+  },
+  quizProgress: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 16,
+    padding: "0 4px",
+  },
+  quizProgressText: {
+    fontSize: 14,
+    color: "#636E72",
+    fontWeight: 600,
+  },
+  quizCategory: {
+    fontSize: 12,
+    color: "#FFFFFF",
+    backgroundColor: "#8B6914",
+    padding: "4px 12px",
+    borderRadius: 20,
+    fontWeight: 600,
+  },
+  quizCard: {
+    backgroundColor: "#FFFFFF",
+    borderRadius: 12,
+    padding: "28px 24px",
+    boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+  },
+  quizQuestion: {
+    fontSize: 18,
+    lineHeight: 1.6,
+    color: "#2D3436",
+    margin: "0 0 24px",
+    fontWeight: 600,
+  },
+  quizOptions: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 12,
+  },
+  quizOption: {
+    display: "flex",
+    alignItems: "center",
+    gap: 14,
+    backgroundColor: "#F8F9FA",
+    border: "2px solid #E8E5DE",
+    borderRadius: 10,
+    padding: "16px 18px",
+    cursor: "pointer",
+    textAlign: "left",
+    transition: "all 0.2s ease",
+    fontFamily: '"Merriweather", "Georgia", serif',
+    outline: "none",
+    boxShadow: "none",
+    WebkitAppearance: "none",
+    MozAppearance: "none",
+    appearance: "none",
+  },
+  quizOptionCorrect: {
+    backgroundColor: "#D4EDDA",
+    borderColor: "#28A745",
+  },
+  quizOptionWrong: {
+    backgroundColor: "#F8D7DA",
+    borderColor: "#DC3545",
+  },
+  quizOptionLetter: {
+    width: 32,
+    height: 32,
+    borderRadius: "50%",
+    backgroundColor: "#8B6914",
+    color: "#FFFFFF",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: 14,
+    fontWeight: 700,
+    flexShrink: 0,
+  },
+  quizOptionText: {
+    fontSize: 15,
+    color: "#2D3436",
+    flex: 1,
+    lineHeight: 1.4,
+  },
+  quizCheckmark: {
+    color: "#28A745",
+    fontSize: 20,
+    fontWeight: 700,
+  },
+  quizCross: {
+    color: "#DC3545",
+    fontSize: 20,
+    fontWeight: 700,
+  },
+  quizExplanation: {
+    marginTop: 24,
+    padding: "20px",
+    backgroundColor: "#FFF8DC",
+    borderRadius: 10,
+    borderLeft: "4px solid #FFD700",
+  },
+  quizExplanationText: {
+    fontSize: 14,
+    lineHeight: 1.6,
+    color: "#5A4A00",
+    margin: "0 0 16px",
+  },
+  quizNextButton: {
+    backgroundColor: "#8B6914",
+    color: "#FFFFFF",
+    border: "none",
+    padding: "12px 24px",
+    borderRadius: 8,
+    fontSize: 15,
+    fontFamily: '"Merriweather", "Georgia", serif',
+    cursor: "pointer",
+    fontWeight: 600,
+    outline: "none",
+  },
+  quizScore: {
+    textAlign: "center",
+    marginTop: 20,
+    fontSize: 16,
+    color: "#636E72",
+    fontWeight: 600,
+  },
+  quizResultsCard: {
+    backgroundColor: "#FFFFFF",
+    borderRadius: 12,
+    padding: "40px 28px",
+    boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+    textAlign: "center",
+    marginTop: 20,
+  },
+  quizResultsIcon: {
+    fontSize: 64,
+    display: "block",
+    marginBottom: 20,
+  },
+  quizResultsTitle: {
+    fontSize: 28,
+    fontWeight: 700,
+    color: "#2D3436",
+    margin: "0 0 16px",
+    fontFamily: '"Merriweather", "Georgia", serif',
+  },
+  quizResultsScore: {
+    fontSize: 22,
+    color: "#8B6914",
+    fontWeight: 700,
+    margin: "0 0 16px",
+  },
+  quizResultsMessage: {
+    fontSize: 16,
+    lineHeight: 1.6,
+    color: "#636E72",
+    margin: "0 0 28px",
+  },
+  quizResultsButtons: {
+    display: "flex",
+    gap: 12,
+    justifyContent: "center",
+    flexWrap: "wrap",
+  },
+  quizRetryButton: {
+    backgroundColor: "#8B6914",
+    color: "#FFFFFF",
+    border: "none",
+    padding: "14px 28px",
+    borderRadius: 8,
+    fontSize: 15,
+    fontFamily: '"Merriweather", "Georgia", serif',
+    cursor: "pointer",
+    fontWeight: 600,
+    outline: "none",
+  },
+  quizBackButton: {
+    backgroundColor: "#FFFFFF",
+    color: "#636E72",
+    border: "2px solid #E8E5DE",
+    padding: "14px 28px",
+    borderRadius: 8,
+    fontSize: 15,
+    fontFamily: '"Merriweather", "Georgia", serif',
+    cursor: "pointer",
+    fontWeight: 600,
+    outline: "none",
   },
 };
 
