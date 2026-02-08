@@ -622,6 +622,7 @@ function App() {
   const [factIndex, setFactIndex] = useState(0);
   const [showWelcome, setShowWelcome] = useState(true);
   const [showQuiz, setShowQuiz] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [quizState, setQuizState] = useState({
     currentQuestion: 0,
     score: 0,
@@ -673,6 +674,72 @@ function App() {
     setFactIndex((i) => (i - 1 + trainFacts.length) % trainFacts.length);
 
   const currentSection = sections.find((s) => s.id === activeSection);
+
+  const navigateTo = (sectionId) => {
+    setActiveSection(sectionId);
+    setMobileMenuOpen(false);
+    setShowWelcome(false);
+  };
+
+  // HST 125 inspired menu icon
+  const HSTIcon = ({ isOpen }) => (
+    <svg
+      viewBox="0 0 40 40"
+      style={{
+        width: 36,
+        height: 36,
+        transition: "all 0.4s ease",
+        opacity: isOpen ? 0.6 : 1,
+        transform: isOpen ? "scale(0.9)" : "scale(1)",
+      }}
+    >
+      {/* HST 125 front profile - iconic sloped nose */}
+      <defs>
+        <linearGradient id="hstBody" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#E8C547" />
+          <stop offset="50%" stopColor="#D4A830" />
+          <stop offset="100%" stopColor="#B8922A" />
+        </linearGradient>
+        <linearGradient id="hstStripe" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#2D3436" />
+          <stop offset="100%" stopColor="#1a1a1a" />
+        </linearGradient>
+      </defs>
+      {/* Main body - distinctive HST nose shape */}
+      <path
+        d="M8 28 L8 18 Q8 12 14 10 L26 10 Q32 12 32 18 L32 28 Q32 32 28 32 L12 32 Q8 32 8 28 Z"
+        fill="url(#hstBody)"
+        stroke="#8B6914"
+        strokeWidth="1"
+      />
+      {/* Iconic black front/windscreen area */}
+      <path
+        d="M10 24 L10 18 Q10 14 15 12 L25 12 Q30 14 30 18 L30 24 Z"
+        fill="url(#hstStripe)"
+      />
+      {/* Windscreen */}
+      <rect x="13" y="14" width="14" height="6" rx="1" fill="#4A6FA5" opacity="0.8" />
+      {/* Headlights */}
+      <circle cx="12" cy="26" r="2" fill="#FFFEF0" />
+      <circle cx="28" cy="26" r="2" fill="#FFFEF0" />
+      {/* InterCity swallow stripe hint */}
+      <path d="M10 20 Q20 18 30 20" stroke="#E74C3C" strokeWidth="1.5" fill="none" opacity="0.8" />
+      {/* Menu lines that appear when closed */}
+      {!isOpen && (
+        <g opacity="0.9">
+          <rect x="14" y="15" width="12" height="1.5" rx="0.5" fill="#FFF" />
+          <rect x="14" y="17.5" width="12" height="1.5" rx="0.5" fill="#FFF" />
+        </g>
+      )}
+      {/* X that appears when open */}
+      {isOpen && (
+        <g stroke="#FFF" strokeWidth="2" strokeLinecap="round">
+          <line x1="16" y1="14" x2="24" y2="20" />
+          <line x1="24" y1="14" x2="16" y2="20" />
+        </g>
+      )}
+    </svg>
+  );
 
   const TrainScene = () => (
     <div style={styles.trainScene}>
@@ -898,7 +965,62 @@ function App() {
           <h1 style={styles.title}>Royston & Cambridge</h1>
           <p style={styles.subtitle}>What's waiting just around the corner</p>
         </div>
+        {/* Mobile Menu Button */}
+        <button
+          style={styles.mobileMenuButton}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Menu"
+        >
+          <HSTIcon isOpen={mobileMenuOpen} />
+        </button>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div
+          style={styles.mobileMenuOverlay}
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <nav style={styles.mobileMenu} onClick={(e) => e.stopPropagation()}>
+            <div style={styles.mobileMenuHeader}>
+              <span style={styles.mobileMenuTitle}>Explore</span>
+            </div>
+            {sections.map((section) => (
+              <button
+                key={section.id}
+                style={{
+                  ...styles.mobileMenuItem,
+                  borderLeft: `4px solid ${section.accent}`,
+                }}
+                onClick={() => navigateTo(section.id)}
+              >
+                <span style={styles.mobileMenuIcon}>{section.icon}</span>
+                <span style={styles.mobileMenuText}>{section.title}</span>
+              </button>
+            ))}
+            <button
+              style={{
+                ...styles.mobileMenuItem,
+                borderLeft: "4px solid #FFD700",
+                background: "linear-gradient(135deg, #FFFEF0 0%, #FFF8DC 100%)",
+              }}
+              onClick={() => {
+                startQuiz();
+                setMobileMenuOpen(false);
+              }}
+            >
+              <span style={styles.mobileMenuIcon}>🧠</span>
+              <span style={styles.mobileMenuText}>Take the Quiz!</span>
+            </button>
+            <button
+              style={styles.mobileMenuClose}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Close Menu
+            </button>
+          </nav>
+        </div>
+      )}
 
       {!activeSection && !showQuiz && <TrainScene />}
 
@@ -1223,8 +1345,92 @@ const styles = {
     textAlign: "center",
     padding: "40px 20px 30px",
     borderBottom: "2px solid #E8E5DE",
+    position: "relative",
   },
   headerInner: {},
+  mobileMenuButton: {
+    position: "absolute",
+    top: 20,
+    right: 10,
+    background: "none",
+    border: "none",
+    cursor: "pointer",
+    padding: 8,
+    borderRadius: 8,
+    display: "block",
+    outline: "none",
+    transition: "background 0.2s ease",
+  },
+  mobileMenuOverlay: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    zIndex: 1000,
+    animation: "fadeIn 0.3s ease",
+  },
+  mobileMenu: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    width: "85%",
+    maxWidth: 320,
+    height: "100%",
+    backgroundColor: "#FAFAF7",
+    boxShadow: "-4px 0 20px rgba(0,0,0,0.15)",
+    overflowY: "auto",
+    animation: "slideIn 0.3s ease",
+  },
+  mobileMenuHeader: {
+    padding: "24px 20px 16px",
+    borderBottom: "2px solid #E8E5DE",
+    backgroundColor: "#2D5F3E",
+  },
+  mobileMenuTitle: {
+    fontSize: 18,
+    fontWeight: 700,
+    color: "#FFFFFF",
+    fontFamily: '"Merriweather", "Georgia", serif',
+  },
+  mobileMenuItem: {
+    display: "flex",
+    alignItems: "center",
+    gap: 14,
+    width: "100%",
+    padding: "16px 20px",
+    backgroundColor: "#FFFFFF",
+    border: "none",
+    borderBottom: "1px solid #E8E5DE",
+    cursor: "pointer",
+    textAlign: "left",
+    fontFamily: '"Merriweather", "Georgia", serif',
+    outline: "none",
+    transition: "background 0.2s ease",
+  },
+  mobileMenuIcon: {
+    fontSize: 22,
+    flexShrink: 0,
+  },
+  mobileMenuText: {
+    fontSize: 15,
+    color: "#2D3436",
+    fontWeight: 600,
+  },
+  mobileMenuClose: {
+    width: "100%",
+    padding: "18px 20px",
+    backgroundColor: "#F0EDE6",
+    border: "none",
+    color: "#636E72",
+    fontSize: 15,
+    fontFamily: '"Merriweather", "Georgia", serif',
+    cursor: "pointer",
+    fontWeight: 600,
+    outline: "none",
+    marginTop: 10,
+  },
   title: {
     fontFamily: '"Merriweather", "Georgia", serif',
     fontSize: 32,
