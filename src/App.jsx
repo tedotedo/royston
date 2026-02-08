@@ -985,8 +985,8 @@ function App() {
               }}
             >
               <span style={styles.cardIcon}>🧠</span>
-              <span style={{ ...styles.cardTitle, color: "#8B6914" }}>
-                Test Your Knowledge — Take the Quiz!
+              <span style={{ ...styles.cardTitle, color: "#8B6914", wordBreak: "break-word" }}>
+                Take the Quiz!
               </span>
               <span style={styles.cardArrow}>→</span>
             </button>
@@ -1471,6 +1471,9 @@ const styles = {
   // Quiz styles
   quizContainer: {
     padding: "20px 0",
+    width: "100%",
+    maxWidth: "100%",
+    overflowX: "hidden",
   },
   quizHeader: {
     backgroundColor: "#8B6914",
@@ -1514,8 +1517,10 @@ const styles = {
   quizCard: {
     backgroundColor: "#FFFFFF",
     borderRadius: 12,
-    padding: "28px 24px",
+    padding: "20px 16px",
     boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+    width: "100%",
+    maxWidth: "100%",
   },
   quizQuestion: {
     fontSize: 18,
@@ -1531,12 +1536,12 @@ const styles = {
   },
   quizOption: {
     display: "flex",
-    alignItems: "center",
-    gap: 14,
+    alignItems: "flex-start",
+    gap: 12,
     backgroundColor: "#F8F9FA",
     border: "2px solid #E8E5DE",
     borderRadius: 10,
-    padding: "16px 18px",
+    padding: "14px 14px",
     cursor: "pointer",
     textAlign: "left",
     transition: "all 0.2s ease",
@@ -1546,6 +1551,8 @@ const styles = {
     WebkitAppearance: "none",
     MozAppearance: "none",
     appearance: "none",
+    width: "100%",
+    maxWidth: "100%",
   },
   quizOptionCorrect: {
     backgroundColor: "#D4EDDA",
@@ -1569,10 +1576,12 @@ const styles = {
     flexShrink: 0,
   },
   quizOptionText: {
-    fontSize: 15,
+    fontSize: 14,
     color: "#2D3436",
     flex: 1,
     lineHeight: 1.4,
+    wordBreak: "break-word",
+    overflowWrap: "break-word",
   },
   quizCheckmark: {
     color: "#28A745",
